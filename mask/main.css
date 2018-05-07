@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.logo{
+    background-color: #1d1f20;
+    
+    width: 100%;
+    height: auto;
+    bottom: 0px;
+    top: 0px;
+    left: 0;
+    position: absolute;
+    mask-clip: text;
+}
+
+p {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    font: bold 300px Roboto, sans-serif;
+    text-transform: uppercase;
+    text-align: center;   
+}
+
+.fire {
+    background-image: url(img/grad.png);
+    background-clip: text;
+    color: transparent;
+    animation: bg 5s linear 0s infinite normal none;    
+    -webkit-background-clip:  text;
+    
+}
+
+@keyframes bg {
+    0%{
+        
+        background-position-y: bottom;
+    }
+    50% {
+       background-position-y: top;
+    }
+    100% {
+       
+        background-position-y: bottom;
+    }
+}

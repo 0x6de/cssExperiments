@@ -1,0 +1,96 @@
+
+body {
+    background-color: #2c3e50;
+    background-image: url(img/light.png),url(img/light2.png);
+    overflow: hidden;
+    animation-duration: 2s;
+    animation-name: slide;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    transform: translate3d(0,0,0);
+    will-change: background-position;
+  }
+  
+  @keyframes slide {
+    0% {
+        background-position: 150px 150px,-150px 150px;
+    }
+    100% {
+        background-position: 0 0,0 0,0 0;
+    }
+  }
+
+.logo {
+    float: left;
+    shape-outside: circle(50%);
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    animation: logo 1s linear 0s 1 normal none;
+    transition: transform 1s;
+}
+
+.logo:active{
+    transform: translateX(10px) rotate(-10deg) translateY(5px);
+    
+}
+
+@keyframes logo{
+    0% {
+        transform: rotate(0turn) scale(2) ;
+    }
+    50% {
+        transform: rotate(0.5turn) scale(1.5);
+    }
+    100%{
+        transform: rotate(1turn) scale(1);
+    }
+}
+
+.logoText {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2;
+    animation: logoText 1s linear 0s 1 normal none;
+
+}
+
+.logoText a {
+    color: #1addff;
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+.logoText a:hover {
+    background-color: #0048bf;
+    color: white;
+}
+
+img:hover + p > a {
+    background-color: #0048bf;
+    color: white;
+}
+
+.logoText span {
+    background-color: #0048bf;
+    font-size: large;
+    color: white;
+    text-transform: capitalize;
+}
+
+@keyframes logoText{
+    0% {
+        line-height: 0.2;
+    }
+
+    100%{
+        line-height: 2;
+    }
+}
